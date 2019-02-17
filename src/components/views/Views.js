@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
-import SidebarButton from '../Buttons.js';
 import logo from '../../resources/V_logo.png';
-import { LoginMagic } from '../Buttons';
-import { CreateButton } from '../Buttons';
+import SidebarButton,{ LoginMagic, CreateButton } from '../Buttons';
+import CommentSection from '../CommentSection';
 import myData from '../../data.json';
 import '../../app.css';
 
@@ -126,6 +125,10 @@ class Views extends Component {
                                 </div>
                                 <div className="App-content min-height23">
                                     {this.state.Locations.Interchange.specificGuides}
+                                </div>
+                                <div className="App-content2 min-height60">
+                                <div className="App-comments-header">Comments</div>
+                                <CommentSection location={this.props.map}></CommentSection>
                                 </div>
                             </div>
                         </div>

@@ -1,12 +1,6 @@
 import React,{ Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import {Welcome} from './components/views/Views';
-import {Home} from './components/views/Views';
-import {Guides} from './components/views/Views';
-import {Login} from './components/views/Views';
-import {Locations} from './components/views/Views';
-import {About} from './components/views/Views';
-
+import {Welcome, Home, Guides, Login, Locations, About} from './components/views/Views';
 
 
 

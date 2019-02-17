@@ -107,7 +107,6 @@
     },
     "Users": {
         "user1": {
-            "isRegistered": true,
             "uid": "VinnyXLpassword1",
             "username": "VinnyXL",
             "pw": "password1",
@@ -160,9 +159,9 @@
     "comments": {
         "InterchangeComments": [
             {
-                "author": "author",
-                "iconColor": "#000000",
-                "commentText": "comment text",
+                "author": "VinnyXL",
+                "iconColor": "#124241",
+                "commentText": "I hate this map, killa is op and i get instantly obliterated from seemingly nowhere!",
                 "datePosted": "20/4/2019"
             }
         ],

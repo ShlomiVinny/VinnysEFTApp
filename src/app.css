@@ -5,7 +5,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.min-height60{
+  min-height: 60vh;
+}
+.min-height23{
+  min-height: 23vh;
+}
+
+/* ----------- App main classes ----------- */
+
 .App {
+  margin-top: calc(12vh + 1px);
   background-color: #000000;
   text-align: center;
   align-items: center;
@@ -54,6 +64,7 @@ body {
 
 
 
+/* Sidebar and all in it */
 .Sidebar{
   background-color: #9a8866;
   z-index: 1;
@@ -64,9 +75,8 @@ body {
   position: absolute;
   left: -20vw;
   border-radius: 1vw;
-  
-  /*Animation: <Name> <duration> <timing function> <delay> <iterations> <direction> */
 }
+/* Animation Shorthand:   Animation: <Name> <duration> <timing function> <delay> <iterations> <direction> */
 
 @media only screen and (max-width: 620px) {
   .Sidebar{
@@ -85,7 +95,8 @@ body {
   background-image:url(./resources/bullet.png);
   background-repeat: no-repeat;
   background-size: 2vw;
-  background-position: 1vw 0.2vh;/* First param:<space between text and bullet>, Second param: <height> */
+  background-position: 1vw 0.2vh;
+  /* First param:<space between text and bullet>, Second param: <height> */
   font-size: 1.5vw;
   margin-left: 0; 
   margin-top: 0.5vh;
@@ -180,11 +191,12 @@ body {
 }
 
 /* Sidebar animation end*/
-
+/* ---------- Navbar ------------ */
 
 .Navbar{
   position: fixed;
   top: 0;
+  z-index: 5;
   border-bottom: 1px #9a8866 solid;
   text-decoration: none;
   align-items: center;
@@ -215,6 +227,8 @@ body {
   color: #000000;
   box-shadow: #9a8866 0 0 40px;
 }
+
+/* ------------ App header and content ----------- */
 
 .App-header{
   max-width: 80vw;
@@ -284,6 +298,7 @@ body {
   color: #000000;
 }
 
+/* Main map, map-Links, locations */
 
 #main_map{
   margin: 0;
@@ -367,12 +382,18 @@ body {
   text-decoration: none;
 }
 
-.min-height60{
-  min-height: 60vh;
+/* Comments */
+.App-comments{}
+.App-comments-header{}
+.comment{}
+.comment-author{}
+.comment-icon{ 
+content: url(./resources/excl-mark-icon.png);
+min-width: 2vw;
+
 }
-.min-height23{
-  min-height: 23vh;
-}
+.comment-text{}
+.comment-date{}
 
 /* Animations */
 @keyframes App-logo-spin {
