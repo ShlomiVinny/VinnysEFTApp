@@ -1,0 +1,210 @@
+{
+    "navbar_items": [
+        {
+            "name": "Home",
+            "type": "Link",
+            "path": "/Home"
+        },
+        {
+            "name": "Guides",
+            "type": "Link",
+            "path": "/Guides"
+        },
+        {
+            "name": "Locations",
+            "type": "Link",
+            "path": "/Locations"
+        },
+        {
+            "name":"Escape From Tarkov",
+            "type": "Generic",
+            "path":"https://www.escapefromtarkov.com/"
+        }
+    ],
+    "sidebar_items": [
+        {
+            "name": "Home",
+            "path": "/Home",
+            "menu_items": []
+        },
+        {
+            "name": "Guides",
+            "path": "/Guides",
+            "menu_items": [
+                {
+                    "name": "Guides-item1",
+                    "path": "/Guides"
+                },
+                {
+                    "name": "Guides-item2",
+                    "path": "/Guides"
+                },
+                {
+                    "name": "Guides-item3",
+                    "path": "/Guides"
+                }
+            ]
+        },
+        {
+            "name": "Locations",
+            "path": "/Locations",
+            "menu_items": [
+                {
+                    "name": "Locations-item1",
+                    "path": "/Locations"
+                },
+                {
+                    "name": "Locations-item2",
+                    "path": "/Locations"
+                },
+                {
+                    "name": "Locations-item3",
+                    "path": "/Locations"
+                }
+            ]
+        },
+        {
+            "name": "About",
+            "path": "/About",
+            "menu_items": []
+        }
+    ],
+    "LoginRegContent": {
+        "bgImage": ".",
+        "header": "Header",
+        "content": "Login content",
+        "content2": "Login content 2"
+    },
+    "AboutContent": {
+        "bgImage": "",
+        "header": "About",
+        "content": "AboutContent content",
+        "content2": "AboutContent content 2"
+    },
+    "WelcomeContent": {
+        "bgImage": "",
+        "header": "Welcome to Vinny's Fan-Site App",
+        "content": "Are you registered?",
+        "content2": "If not, register now and enjoy all things tarkov!"
+    },
+    "MainContent": {
+        "bgImage": "",
+        "header": "Main header",
+        "content": "Main content",
+        "content2": "Main content 2"
+    },
+    "GuidesContent": {
+        "bgImage": "",
+        "header": "Guides header",
+        "content": "Guides content",
+        "content2": "Guides content 2"
+    },
+    "LocationsContent": {
+        "bgImage": "",
+        "header": "Choose a Location:",
+        "content": "Guides content",
+        "content2": "Guides content 2"
+    },
+    "Users": {
+        "user1": {
+            "isRegistered": true,
+            "uid": "VinnyXLpassword1",
+            "username": "VinnyXL",
+            "pw": "password1",
+            "registeredSince": "4/20",
+            "preferences": {
+                "fontSize": 16,
+                "fontSizeUnit": "pt",
+                "clickableSize": 2
+            }
+        }
+    },
+    "Locations": {
+        "Interchange": {
+            "header":"Interchange",
+            "mapUrl": "url",
+            "content":"content",
+            "specificGuides": "specific guides content"
+        },
+        "Customs": {
+            "header":"Customs",
+            "mapUrl": "url",
+            "content":"content",
+            "specificGuides": "specific guides content"
+        },
+        "Factory": {
+            "header":"Factory",
+            "mapUrl": "url",
+            "content":"content",
+            "specificGuides": "specific guides content"
+        },
+        "Woods": {
+            "header":"Woods",
+            "mapUrl": "url",
+            "content":"content",
+            "specificGuides": "specific guides content"
+        },
+        "Shoreline": {
+            "header":"Shoreline",
+            "mapUrl": "url",
+            "content":"content",
+            "specificGuides": "specific guides content"
+        },
+        "Lab": {
+            "header":"Lab",
+            "mapUrl": "url",
+            "content":"content",
+            "specificGuides": "specific guides content"
+        }
+    },
+    "comments": {
+        "InterchangeComments": [
+            {
+                "author": "author",
+                "iconColor": "#000000",
+                "commentText": "comment text",
+                "datePosted": "20/4/2019"
+            }
+        ],
+        "CustomsComments": [
+            {
+                "author": "author",
+                "iconColor": "#000000",
+                "commentText": "comment text",
+                "datePosted": "20/4/2019"
+            }
+        ],
+        "FactoryComments": [
+            {
+                "author": "author",
+                "iconColor": "#000000",
+                "commentText": "comment text",
+                "datePosted": "20/4/2019"
+            }
+        ],
+        "WoodsComments": [
+            {
+                "author": "author",
+                "iconColor": "#000000",
+                "commentText": "comment text",
+                "datePosted": "20/4/2019"
+            }
+        ],
+        "ShorelineComments": [
+            {
+                "author": "author",
+                "iconColor": "#000000",
+                "commentText": "comment text",
+                "datePosted": "20/4/2019"
+            }
+        ],
+        "LabComments": [
+            {
+                "author": "author",
+                "iconColor": "#000000",
+                "commentText": "comment text",
+                "datePosted": "20/4/2019"
+            }
+        ]
+    }
+}
