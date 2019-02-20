@@ -12,7 +12,7 @@ body {
   min-height: 23vh;
 }
 
-/* ----------- App main classes ----------- */
+/* ------------------------------------------------------------- App main classes --------------------------------------------------- */
 .with-navbar{margin-top: calc(12vh + 1px);}
 
 .App {
@@ -42,7 +42,7 @@ body {
 }
 
 
-/* Welcome page */
+/* ---------------------------------------------------------------------- Welcome page -------------------------------------------------- */
 .Generic-button{
   margin: auto;
   color: #000000;
@@ -65,12 +65,14 @@ body {
 
 
 
-/* Sidebar and all in it */
+/* ------------------------------------------------------------------------------------------ Sidebar  and all in it ------------------------------ */
 .Sidebar{
+  text-align: left;
+  padding: 10vh 0 10vh 0;
   background-color: #9a8866;
   z-index: 1;
   max-width: 20vw;
-  margin: 25vh 0 auto 0;
+  margin: 10vh 0 auto 0;
   border: 2px #61dafb solid;
   display: table;
   position: absolute;
@@ -91,17 +93,17 @@ body {
   display: flex;
   text-decoration: none;
   font: Arial;
-  margin: 3vh 1vh 3vh 1vh;
   list-style-type: none;
   background-image:url(./resources/bullet.png);
   background-repeat: no-repeat;
-  background-size: 2vw;
-  background-position: 1vw 0.2vh;
+  background-size: 1.5vw;
+  background-position: 0.5vw 0;
   /* First param:<space between text and bullet>, Second param: <height> */
   font-size: 1.5vw;
+  margin-right: 1vw;
   margin-left: 0; 
-  margin-top: 0.5vh;
-  margin-bottom: 0.5vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   padding-left: 0; 
 }
 
@@ -123,9 +125,8 @@ body {
 .Sidebar-item-span{
   text-decoration: none;
    position: relative;
-   left: 0;
+   margin-left: 3vw;
 }
-
 
 
 .Sidebar-inner-item{
@@ -151,6 +152,7 @@ body {
 
 
 .Sidebar-button{
+  z-index: 5;
   font: Arial;
   font-weight: 700;
   font-size: 1vw;
@@ -192,12 +194,12 @@ body {
 }
 
 /* Sidebar animation end*/
-/* ---------- Navbar ------------ */
+/* -------------------------------------------------------------------------------- Navbar ------------------------------------------------------------------------ */
 
 .Navbar{
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 4;
   border-bottom: 1px #9a8866 solid;
   text-decoration: none;
   align-items: center;
@@ -218,7 +220,7 @@ body {
   font: Arial;
   font-size: 1.3vw;
   color: #9a8866;
-  background-color: #000000; 
+  background-color: 0; 
   transition: background-color 0.4s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -229,7 +231,7 @@ body {
   box-shadow: #9a8866 0 0 40px;
 }
 
-/* ------------ App header and content ----------- */
+/* ---------------------------------------------------------------------------------- App header and content ------------------------------------------------------------- */
 
 .App-header{
   max-width: 80vw;
@@ -299,22 +301,23 @@ body {
   color: #000000;
 }
 
-/*  ------------ twitter -----------  */
-
-.App-twitter-timeline{
-  z-index: 5;
-  position: absolute;
-  right: 0.1vw;
-  top: calc(12vh + 1px);
-  max-height: 60vh;
-}
+/*  -------------------------------------------------------------------------- twitter -----------------------------------------------------------------------  */
 
 .twitter-timeline{
-  max-height: 60vh;
-  min-height: 23vh;
+  z-index: 5;
+  position: absolute !important;
+  right: 0 !important;
+  top: calc(12vh + 1px);
+
+  max-width: 20vw !important;
+  height: 60vh !important;
+  max-height: 60vh !important;
+  min-height: 23vh !important;
 }
 
-/* Main map, map-Links, locations */
+
+
+/* -------------------------------------------------- Main map, map-Links, locations ---------------------------------------------------------------------- */
 
 #main_map{
   margin: 0;
@@ -398,7 +401,7 @@ body {
   text-decoration: none;
 }
 
-/* Comments */
+/* ---------------------------------------------------------------------- Comments -------------------------------------------------------------------------------- */
 .App-comments{}
 .App-comments-header{}
 .comment{}

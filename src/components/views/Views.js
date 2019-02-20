@@ -24,19 +24,19 @@ class Views extends Component {
             default: return;
             case "Home": return (
                 <div className="App with-navbar">
+                    <Twitter />
                     <Sidebar />
                     <SidebarButton />
                     
                     <div className="App-top">
                         <Navbar />
-                        
                     </div>
-                    
+
                     <div className='App-content-wrapper' style={{ backgroundImage: 'url(' + this.state.MainContent.bgImage + ')' }}>
                         <div className='App-header'>{this.state.MainContent.header}</div>
                         <div className='App-content min-height60'>
-                        {this.state.MainContent.content}
-                        <Twitter/>
+                            {this.state.MainContent.content}
+
                         </div>
                         <div className='App-content2 min-height23'>{this.state.MainContent.content2}</div>
                     </div>

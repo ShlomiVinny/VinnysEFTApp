@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { Timeline } from 'react-twitter-widgets'
 
 
 class Twitter extends Component {
@@ -8,21 +8,26 @@ class Twitter extends Component {
         this.state = {};
     }
     render() {
-
-
-
         return (
             <div className="App-twitter-timeline">
-            <TwitterTimelineEmbed
-                sourceType="profile"
-                screenName="bstategames"
-                theme='dark'
-                linkColor='#9a8866'
-                options={{ height: 495}}
-            />
+            <Timeline
+    dataSource={{
+      sourceType: 'profile',
+      screenName: 'bstategames'
+    }}
+    options={{
+      theme: 'dark',
+      height: '600'
+    }}
+    onLoad={() => console.log('Timeline is loaded!')}
+  />
             </div>
         )
     }
 }
 
 export default Twitter;
+
+
+
+

@@ -111,9 +111,9 @@ class SidebarButton extends Component {
         let button;
 
         if (menuDisplayed) {
-            button = <CreateButton type="sidebar" buttonText="Close" onClick={this.closeSidebar} />;
+            button = <CreateButton type="sidebar" buttonText="X" onClick={this.closeSidebar} />;
         } else {
-            button = <CreateButton type="sidebar" buttonText="Menu" onClick={this.openSidebar} />;
+            button = <CreateButton type="sidebar" buttonText="|||" onClick={this.openSidebar} />;
         }
 
         return (

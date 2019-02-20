@@ -17,6 +17,7 @@ class Sidebar extends Component {
     
     render() {
         
+        
         const sidebarItems = myData.sidebar_items;
         return (
             <div className='Sidebar' id="Sidebar">
@@ -27,10 +28,10 @@ class Sidebar extends Component {
                         <div key={key} className="Sidebar-item">
 
                             <Link className="Sidebar-item-link" to={item.path}>
-                                <span className="Sidebar-item-span">{item.name}
+                                <span className='Sidebar-item-span'>
+                                {item.name}
                                 </span>
                             </Link>
-
                             {menuItems.map((item, key) => {
                                 return (
                                     <Link to={item.path} className="Sidebar-inner-item" key={key}>
