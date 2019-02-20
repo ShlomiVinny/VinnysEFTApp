@@ -13,9 +13,10 @@ body {
 }
 
 /* ----------- App main classes ----------- */
+.with-navbar{margin-top: calc(12vh + 1px);}
 
 .App {
-  margin-top: calc(12vh + 1px);
+  
   background-color: #000000;
   text-align: center;
   align-items: center;
@@ -296,6 +297,21 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #000000;
+}
+
+/*  ------------ twitter -----------  */
+
+.App-twitter-timeline{
+  z-index: 5;
+  position: absolute;
+  right: 0.1vw;
+  top: calc(12vh + 1px);
+  max-height: 60vh;
+}
+
+.twitter-timeline{
+  max-height: 60vh;
+  min-height: 23vh;
 }
 
 /* Main map, map-Links, locations */
