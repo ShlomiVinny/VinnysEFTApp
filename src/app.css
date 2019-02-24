@@ -1,3 +1,26 @@
+/*
+                                     /$$$$$$                 /$$                    
+                                    |_  $$_/                | $$                    
+                                      | $$   /$$$$$$$   /$$$$$$$  /$$$$$$  /$$   /$$
+                                      | $$  | $$__  $$ /$$__  $$ /$$__  $$|  $$ /$$/
+                                      | $$  | $$  \ $$| $$  | $$| $$$$$$$$ \  $$$$/ 
+                                      | $$  | $$  | $$| $$  | $$| $$_____/  >$$  $$ 
+                                     /$$$$$$| $$  | $$|  $$$$$$$|  $$$$$$$ /$$/\  $$
+                                    |______/|__/  |__/ \_______/ \_______/|__/  \__/
+
+  1. General - body 
+  2. App main classes - App, logo, top
+  3. App header and content
+  4. Generic Buttons
+  5. Sidebar
+  6. Navbar
+  7. Twitter
+  8. Main map, map-Links, locations
+  9. Comments
+
+*/
+
+/* -------------------------------------------- General -----------------------------------------   */
 body {
   margin: 0;
   padding: 0;
@@ -11,18 +34,26 @@ body {
 .min-height23{
   min-height: 23vh;
 }
+.min-height28{
+  min-height: 28vh;
+}
+.with-navbar{
+  margin-top: calc(12vh + 1px);
+}
 
 /* ------------------------------------------------------------- App main classes --------------------------------------------------- */
-.with-navbar{margin-top: calc(12vh + 1px);}
+
+#App-wrapper{
+  background-color: #000000;
+}
 
 .App {
-  
   background-color: #000000;
   text-align: center;
   align-items: center;
   align-content: center;
   align-self: center;
-  display: block;
+  display: contents;
 }
 
 .App-logo{
@@ -41,8 +72,79 @@ body {
   justify-content: space-evenly;
 }
 
+/* ---------------------------------------------------------------------------------- App header and content ------------------------------------------------------------- */
 
-/* ---------------------------------------------------------------------- Welcome page -------------------------------------------------- */
+.App-header{
+  max-width: 80vw;
+  margin: auto;
+  background-image: linear-gradient(to right, #000000, #9a8866, #000000 );
+  background-color: #000000;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000000;
+}
+
+.App-content-wrapper{
+  padding: 0;
+  position:  relative;
+  top: 12vh;
+  background-color: #000000;
+}
+
+.App-content{
+  margin: auto;
+  max-width: 80vw;
+  background-image: linear-gradient(to right, #000000 , #9a8866 , #000000  );
+  background-color: #9a8866;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 2vmin);
+  color: #000000;
+}
+
+.App-content2{
+  margin: auto;
+  max-width: 80vw;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 2vmin);
+  color: #9a8866;
+}
+
+.App-footer{
+  max-width: 80vw;
+  background-color: #000000;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #9a8866;
+}
+
+.App-extras{
+  max-width: 80vw;
+  background-color: #9a8866;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000000;
+}
+
+/* ---------------------------------------------------------------------- Generic Buttons -------------------------------------------------- */
 .Generic-button{
   margin: auto;
   color: #000000;
@@ -61,11 +163,15 @@ body {
   color: #9a8866;
   box-shadow: #9a8866 0 0 40px;
 }
+
+.Home-button{
+  width: 5vw;
+}
 /* Welcome page end*/
 
 
 
-/* ------------------------------------------------------------------------------------------ Sidebar  and all in it ------------------------------ */
+/* ---------------------------------------------------------------------------------- Sidebar and all in it ------------------------------ */
 .Sidebar{
   text-align: left;
   padding: 10vh 0 10vh 0;
@@ -76,6 +182,7 @@ body {
   border: 2px #61dafb solid;
   display: table;
   position: absolute;
+  top: 5vh;
   left: -20vw;
   border-radius: 1vw;
 }
@@ -156,9 +263,9 @@ body {
   font: Arial;
   font-weight: 700;
   font-size: 1vw;
-  position: absolute;
-  left: 11vw;
-  top: 1vh;
+  position: fixed;
+  left: 1vw;
+  top: 3vh;
   border: 2px black solid;
   border-radius: 2vh;
   width: 6vw;
@@ -217,7 +324,7 @@ body {
   border: 0px;
   border-radius: 1vh;
   margin: 2vh 5vh 2vh 5vh;
-  font: Arial;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.3vw;
   color: #9a8866;
   background-color: 0; 
@@ -231,75 +338,7 @@ body {
   box-shadow: #9a8866 0 0 40px;
 }
 
-/* ---------------------------------------------------------------------------------- App header and content ------------------------------------------------------------- */
 
-.App-header{
-  max-width: 80vw;
-  margin: auto;
-  background-image: linear-gradient(to right, #000000, #9a8866, #000000 );
-  background-color: #9a8866;
-  min-height: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #000000;
-}
-
-.App-content-wrapper{
-  padding: 0;
-  position:  relative;
-}
-
-.App-content{
-  margin: auto;
-  max-width: 80vw;
-  background-image: linear-gradient(to right, #000000 , #9a8866 , #000000  );
-  background-color: #9a8866;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(6px + 2vmin);
-  color: #000000;
-}
-
-.App-content2{
-  margin: auto;
-  max-width: 80vw;
-  background-color: #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(6px + 2vmin);
-  color: #9a8866;
-}
-
-.App-footer{
-  max-width: 80vw;
-  background-color: #000000;
-  min-height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #9a8866;
-}
-
-.App-extras{
-  max-width: 80vw;
-  background-color: #9a8866;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #000000;
-}
 
 /*  -------------------------------------------------------------------------- twitter -----------------------------------------------------------------------  */
 
@@ -308,7 +347,6 @@ body {
   position: absolute !important;
   right: 0 !important;
   top: calc(12vh + 1px);
-
   max-width: 20vw !important;
   height: 60vh !important;
   max-height: 60vh !important;
@@ -328,7 +366,7 @@ body {
 
 #locations{
   position: relative;
-  background-image: url(./resources/MainMap.png);
+  background-image: url(./resources/locations/MainMap.png);
   padding: 0;
   margin: auto;
   height: 758px;
@@ -342,7 +380,6 @@ body {
   position: absolute;
   left: 64.5% ;
   top: 25.5% ;
-  color: yellow;
   text-decoration: none;
 }
 
@@ -353,7 +390,6 @@ body {
   position: absolute;
   left: 58% ;
   top: 33.5% ;
-  color: yellow;
   text-decoration: none;
 }
 
@@ -364,7 +400,6 @@ body {
   position: absolute;
   left: 35% ;
   top: 31% ;
-  color: yellow;
   text-decoration: none;
 }
 
@@ -375,7 +410,6 @@ body {
   position: absolute;
   left: 42% ;
   top: 44.5% ;
-  color: yellow;
   text-decoration: none;
 }
 
@@ -386,7 +420,6 @@ body {
   position: absolute;
   left: 33% ;
   top: 81% ;
-  color: yellow;
   text-decoration: none;
 }
 
@@ -397,24 +430,60 @@ body {
   position: absolute;
   left: 40% ;
   top: 11.5% ;
-  color: yellow;
   text-decoration: none;
 }
 
 /* ---------------------------------------------------------------------- Comments -------------------------------------------------------------------------------- */
-.App-comments{}
-.App-comments-header{}
-.comment{}
-.comment-author{}
-.comment-icon{ 
-content: url(./resources/excl-mark-icon.png);
-min-width: 2vw;
-
+.App-comments{
+  padding: auto;
+  
+  display: flex;
+  flex-direction: column;
 }
-.comment-text{}
-.comment-date{}
 
-/* Animations */
+.comment{
+  width: 80%;
+  align-self: center;
+  padding: 4vh 2vw 4vh 2vw;
+  background-color: #999999;
+  border: #9a8866 solid 1vh;
+  border-radius: 1vw;
+  margin: 1vh 0 1vh 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-avatar{ 
+  margin: auto 2vw auto 0;
+  border-radius: 50%;
+max-width: 5vw;
+max-height: 5vw;
+}
+
+.comment-text{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.comment-author{
+  color: #000000;
+   font-family: fantasy;
+  }
+
+.comment-content{
+  color: #000000;
+}
+
+.comment-date{
+  color: #1e00a3;
+  margin-top: 3vh; 
+}
+
+
+
+/* ---------------------------------------------------------- Animations ---------------------------------------------- */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -423,6 +492,8 @@ min-width: 2vw;
     transform: rotate(360deg);
   }
 }
+
+
 
 /* 
 BSG original colors: #9a8866 gold-ish
