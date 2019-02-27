@@ -121,37 +121,37 @@
     "Locations": {
         "Interchange": {
             "header":"Interchange",
-            "mapUrl": "url",
+            "bgImage": "./src/resources/locations/Interchange/inter-ingame-map.jpg",
             "content":"content",
             "specificGuides": "specific guides content"
         },
         "Customs": {
             "header":"Customs",
-            "mapUrl": "./src/resources/locations/Customs/customs_bg1.png",
+            "bgImage": "./src/resources/locations/Customs/customs_bg1.png",
             "content":"content",
             "specificGuides": "specific guides content"
         },
         "Factory": {
             "header":"Factory",
-            "mapUrl": "url",
+            "bgImage": "url",
             "content":"content",
             "specificGuides": "specific guides content"
         },
         "Woods": {
             "header":"Woods",
-            "mapUrl": "url",
+            "bgImage": "url",
             "content":"content",
             "specificGuides": "specific guides content"
         },
         "Shoreline": {
             "header":"Shoreline",
-            "mapUrl": "url",
+            "bgImage": "url",
             "content":"content",
             "specificGuides": "specific guides content"
         },
         "Lab": {
             "header":"Lab",
-            "mapUrl": "url",
+            "bgImage": "url",
             "content":"content",
             "specificGuides": "specific guides content"
         }

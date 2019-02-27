@@ -16,7 +16,7 @@ class Welcome extends Component {
             <div className="App-top">
                 
             </div>
-            <div className='App-content-wrapper' style={{ backgroundImage: 'url(' + this.state.WelcomeContent.bgImage + ')' }}>
+            <div className='App-content-wrapper top-12vh' style={{ backgroundImage: 'url(' + this.state.WelcomeContent.bgImage + ')' }}>
                 <div className="App-header">
                     {this.state.WelcomeContent.header}
                 </div>

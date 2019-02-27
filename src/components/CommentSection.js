@@ -32,7 +32,7 @@ class CommentSection extends Component {
             <div className="App-comments">
                 {comments.map((comment, key) => {
                     return (
-                        <div className="comment">
+                        <div className="comment" key={key}>
                             <img className="comment-avatar" src={avatar} style={{ backgroundColor: `${comment.avatarColor}` }} alt=" avatar "></img>
                             <div className="comment-text">
                                 <span className="comment-author">{comment.author}</span>

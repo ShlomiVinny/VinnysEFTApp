@@ -18,7 +18,7 @@ class Guides extends Component {
                     <div className="App-top">
                         <Navbar />
                     </div>
-                    <div className='App-content-wrapper' style={{ backgroundImage: 'url(' + this.state.GuidesContent.bgImage + ')' }}>
+                    <div className='App-content-wrapper top-12vh' style={{ backgroundImage: 'url(' + this.state.GuidesContent.bgImage + ')' }}>
                         <div className='App-header'>{this.state.GuidesContent.header}</div>
                         <div className='App-content min-height60'>{this.state.GuidesContent.content}</div>
                         <div className='App-content2 min-height28'>{this.state.GuidesContent.content2}</div>

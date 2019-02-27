@@ -12,15 +12,17 @@
   2. App main classes - App, logo, top
   3. App header and content
   4. Generic Buttons
-  5. Sidebar
-  6. Navbar
+  5. Sidebar - Sidebar-item / -link
+  6. Navbar 
   7. Twitter
   8. Main map, map-Links, locations
   9. Comments
+  10. Animations - @Key frames
+  11. Media queries
 
 */
-
 /* -------------------------------------------- General -----------------------------------------   */
+
 body {
   margin: 0;
   padding: 0;
@@ -40,8 +42,22 @@ body {
 .with-navbar{
   margin-top: calc(12vh + 1px);
 }
+.top-12vh{
+  top: calc(12vh + 1px);
+}
+
+
+
+
+
 
 /* ------------------------------------------------------------- App main classes --------------------------------------------------- */
+
+
+
+
+
+
 
 #App-wrapper{
   background-color: #000000;
@@ -64,6 +80,7 @@ body {
 }
 
 .App-top{
+  z-index: 2;
   margin: auto;
   width: 80vh;
   display: flex;
@@ -72,9 +89,20 @@ body {
   justify-content: space-evenly;
 }
 
-/* ---------------------------------------------------------------------------------- App header and content ------------------------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------------------------------- App header and content ------------------------------------------------------------- */
+
+
+
+
+
 
 .App-header{
+  z-index: 2;
   max-width: 80vw;
   margin: auto;
   background-image: linear-gradient(to right, #000000, #9a8866, #000000 );
@@ -89,16 +117,24 @@ body {
 }
 
 .App-content-wrapper{
+  z-index: 2;
   padding: 0;
   position:  relative;
-  top: 12vh;
-  background-color: #000000;
+}
+
+.App-content-bg{
+  z-index: 1;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  filter: opacity(50%);
 }
 
 .App-content{
   margin: auto;
   max-width: 80vw;
-  background-image: linear-gradient(to right, #000000 , #9a8866 , #000000  );
+  background-image: linear-gradient(to right, #000000 , #9a8866 , #000000);
   background-color: #9a8866;
   display: flex;
   flex-direction: column;
@@ -120,18 +156,6 @@ body {
   color: #9a8866;
 }
 
-.App-footer{
-  max-width: 80vw;
-  background-color: #000000;
-  min-height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #9a8866;
-}
-
 .App-extras{
   max-width: 80vw;
   background-color: #9a8866;
@@ -144,8 +168,20 @@ body {
   color: #000000;
 }
 
+
+
+
+
+
 /* ---------------------------------------------------------------------- Generic Buttons -------------------------------------------------- */
+
+
+
+
+
+
 .Generic-button{
+  z-index: 2;
   margin: auto;
   color: #000000;
   font: Arial;
@@ -158,6 +194,7 @@ body {
 }
 
 .Generic-button:hover{
+  z-index: 2;
   text-decoration: none;
   background: #000000;
   color: #9a8866;
@@ -165,18 +202,28 @@ body {
 }
 
 .Home-button{
+  z-index: 2;
   width: 5vw;
 }
 /* Welcome page end*/
 
 
 
-/* ---------------------------------------------------------------------------------- Sidebar and all in it ------------------------------ */
+
+
+
+/* ----------------------------------------------------------------------- Sidebar and all in it ------------------------------ */
+
+
+
+
+
+
 .Sidebar{
   text-align: left;
   padding: 10vh 0 10vh 0;
   background-color: #9a8866;
-  z-index: 1;
+  z-index: 5;
   max-width: 20vw;
   margin: 10vh 0 auto 0;
   border: 2px #61dafb solid;
@@ -188,11 +235,7 @@ body {
 }
 /* Animation Shorthand:   Animation: <Name> <duration> <timing function> <delay> <iterations> <direction> */
 
-@media only screen and (max-width: 620px) {
-  .Sidebar{
-    display: none;
-  }
-}
+
 
 .Sidebar-item{
   flex: 1;
@@ -207,55 +250,49 @@ body {
   background-position: 0.5vw 0;
   /* First param:<space between text and bullet>, Second param: <height> */
   font-size: 1.5vw;
-  margin-right: 1vw;
-  margin-left: 0; 
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin: 1vh 1vh 0 1vh;
   padding-left: 0; 
 }
-
-.Sidebar-item:hover{
-  text-decoration: none;
-  color: #000000;
-}
-
 .Sidebar-item-link{
   text-decoration: none;
   color: #000000;
 }
-
+.Sidebar-item:hover {
+  text-decoration: none;
+  color: #000000;
+}
 .Sidebar-item-link:hover{
   text-decoration: none;
   color: #000000;
 }
-
 .Sidebar-item-span{
-  text-decoration: none;
-   position: relative;
    margin-left: 3vw;
 }
-
-
 .Sidebar-inner-item{
   flex: 1;
   text-decoration: none;
   font: Arial;
-  margin: 3vh 1vh 3vh 1vh;
   list-style-type: circle;
   font-size: 1vw;
   color: #000000;
-  margin-left: 3vw; /**indent**/
-  margin-top: 0.5vh;
-  margin-bottom: 0.5vh;
+  margin: 0.5vh 0 0.5vw 3vw;
   padding-left: 2vw;  /**space between text and bullet**/
 }
-
-
 .Sidebar-inner-item:hover{
   color: #000000;
   text-decoration: none;
   transform: scale(1.1);
 }
+
+
+
+
+
+/* --------------------------------------------------------------- Sidebar button -------------------------------------------------*/
+
+
+
+
 
 
 .Sidebar-button{
@@ -299,9 +336,15 @@ body {
     left: -20vw;
   }
 }
-
 /* Sidebar animation end*/
+
+
+
+
 /* -------------------------------------------------------------------------------- Navbar ------------------------------------------------------------------------ */
+
+
+
 
 .Navbar{
   position: fixed;
@@ -340,7 +383,14 @@ body {
 
 
 
+
+
 /*  -------------------------------------------------------------------------- twitter -----------------------------------------------------------------------  */
+
+
+
+
+
 
 .twitter-timeline{
   z-index: 5;
@@ -355,7 +405,13 @@ body {
 
 
 
+
+
 /* -------------------------------------------------- Main map, map-Links, locations ---------------------------------------------------------------------- */
+
+
+
+
 
 #main_map{
   margin: 0;
@@ -433,7 +489,16 @@ body {
   text-decoration: none;
 }
 
+
+
+
+
 /* ---------------------------------------------------------------------- Comments -------------------------------------------------------------------------------- */
+
+
+
+
+
 .App-comments{
   padding: auto;
   
@@ -483,7 +548,14 @@ max-height: 5vw;
 
 
 
+
+
 /* ---------------------------------------------------------- Animations ---------------------------------------------- */
+
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -495,6 +567,21 @@ max-height: 5vw;
 
 
 
+
+/* ------------------------------------------------------------------- Media queries -----------------------------------------------------------  */
+
+@media only screen and (max-width: 620px) {
+  .Sidebar{
+    display: none;
+  }
+}
+
+
+
+
+
+
+/* ----------------------------------- NOTES ------------------------- */
 /* 
 BSG original colors: #9a8866 gold-ish
 BSG bg color: #000000 true black

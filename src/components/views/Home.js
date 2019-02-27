@@ -20,7 +20,7 @@ class Home extends Component {
     <div className="App-top">
         <Navbar />
     </div>
-    <div className='App-content-wrapper' style={{ backgroundImage: 'url(' + this.state.MainContent.bgImage + ')' }}>
+    <div className='App-content-wrapper top-12vh' style={{ backgroundImage: 'url(' + this.state.MainContent.bgImage + ')' }}>
         <div className='App-header'>{this.state.MainContent.header}</div>
         <div className='App-content min-height60'>{this.state.MainContent.content}</div>
         <div className='App-content2 min-height28'>{this.state.MainContent.content2}</div>

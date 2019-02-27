@@ -16,7 +16,7 @@ class About extends Component {
                 <div className="App-top">
                     <Navbar />
                 </div>
-                <div className='App-content-wrapper' style={{ backgroundImage: 'url(' + this.state.AboutContent.bgImage + ')' }}>
+                <div className='App-content-wrapper top-12vh' style={{ backgroundImage: 'url(' + this.state.AboutContent.bgImage + ')' }}>
                     <div className="App-header">
                         {this.state.AboutContent.header}
                     </div>
