@@ -1,113 +1,116 @@
 {
-    "navbar_items": [
+    "General": {
+        "navbar_items": [
+            {
+                "name": "Home",
+                "type": "Link",
+                "path": "/Home"
+            },
+            {
+                "name": "Guides",
+                "type": "Link",
+                "path": "/Guides"
+            },
+            {
+                "name": "Locations",
+                "type": "Link",
+                "path": "/Locations"
+            },
+            {
+                "name": "Escape From Tarkov",
+                "type": "Generic",
+                "path": "https://www.escapefromtarkov.com/"
+            }
+        ],
+        "sidebar_items": [
+            {
+                "name": "Home",
+                "path": "/Home",
+                "menu_items": []
+            },
+            {
+                "name": "Guides",
+                "path": "/Guides",
+                "menu_items": [
+                    {
+                        "name": "Guides-item1",
+                        "path": "/Guides"
+                    },
+                    {
+                        "name": "Guides-item2",
+                        "path": "/Guides"
+                    },
+                    {
+                        "name": "Guides-item3",
+                        "path": "/Guides"
+                    }
+                ]
+            },
+            {
+                "name": "Locations",
+                "path": "/Locations",
+                "menu_items": [
+                    {
+                        "name": "Locations-item1",
+                        "path": "/Locations"
+                    },
+                    {
+                        "name": "Locations-item2",
+                        "path": "/Locations"
+                    },
+                    {
+                        "name": "Locations-item3",
+                        "path": "/Locations"
+                    }
+                ]
+            },
+            {
+                "name": "About",
+                "path": "/About",
+                "menu_items": []
+            }
+        ]
+    },
+    "Content": [
         {
-            "name": "Home",
-            "type": "Link",
-            "path": "/Home"
+            "name": "AboutContent",
+            "bgImage": "",
+            "header": "About",
+            "content": "AboutContent content",
+            "content2": "AboutContent content 2"
         },
         {
-            "name": "Guides",
-            "type": "Link",
-            "path": "/Guides"
+            "name": "WelcomeContent",
+            "bgImage": "",
+            "header": "Welcome to Vinny's Fan-Site App",
+            "content": "Are you registered?",
+            "content2": "If not, register now and enjoy all things tarkov!"
         },
         {
-            "name": "Locations",
-            "type": "Link",
-            "path": "/Locations"
+            "name": "MainContent",
+            "bgImage": "",
+            "header": "Main header",
+            "content": "Main content",
+            "content2": "Main content 2"
         },
         {
-            "name":"Escape From Tarkov",
-            "type": "Generic",
-            "path":"https://www.escapefromtarkov.com/"
+            "name": "GuidesContent",
+            "bgImage": "",
+            "header": "Guides header",
+            "content": "Guides content",
+            "content2": "Guides content 2"
+        },
+        {
+            "name": "LocationsContent",
+            "bgImage": "",
+            "header": "Choose a Location:",
+            "content": "Guides content",
+            "content2": "Guides content 2"
         }
     ],
-    "sidebar_items": [
+    "Users": [
         {
-            "name": "Home",
-            "path": "/Home",
-            "menu_items": []
-        },
-        {
-            "name": "Guides",
-            "path": "/Guides",
-            "menu_items": [
-                {
-                    "name": "Guides-item1",
-                    "path": "/Guides"
-                },
-                {
-                    "name": "Guides-item2",
-                    "path": "/Guides"
-                },
-                {
-                    "name": "Guides-item3",
-                    "path": "/Guides"
-                }
-            ]
-        },
-        {
-            "name": "Locations",
-            "path": "/Locations",
-            "menu_items": [
-                {
-                    "name": "Locations-item1",
-                    "path": "/Locations"
-                },
-                {
-                    "name": "Locations-item2",
-                    "path": "/Locations"
-                },
-                {
-                    "name": "Locations-item3",
-                    "path": "/Locations"
-                }
-            ]
-        },
-        {
-            "name": "About",
-            "path": "/About",
-            "menu_items": []
-        }
-    ],
-    "LoginRegContent": {
-        "bgImage": ".",
-        "header": "Header",
-        "content": "Login content",
-        "content2": "Login content 2"
-    },
-    "AboutContent": {
-        "bgImage": "",
-        "header": "About",
-        "content": "AboutContent content",
-        "content2": "AboutContent content 2"
-    },
-    "WelcomeContent": {
-        "bgImage": "",
-        "header": "Welcome to Vinny's Fan-Site App",
-        "content": "Are you registered?",
-        "content2": "If not, register now and enjoy all things tarkov!"
-    },
-    "MainContent": {
-        "bgImage": "",
-        "header": "Main header",
-        "content": "Main content",
-        "content2": "Main content 2"
-    },
-    "GuidesContent": {
-        "bgImage": "",
-        "header": "Guides header",
-        "content": "Guides content",
-        "content2": "Guides content 2"
-    },
-    "LocationsContent": {
-        "bgImage": "",
-        "header": "Choose a Location:",
-        "content": "Guides content",
-        "content2": "Guides content 2"
-    },
-    "Users": {
-        "user1": {
-            "uid": "VinnyXLpassword1",
+            "name": "user1",
             "username": "VinnyXL",
             "pw": "password1",
             "registeredSince": "4/20",
@@ -117,57 +120,60 @@
                 "clickableSize": 2
             }
         }
-    },
+    ],
     "Locations": {
         "Interchange": {
-            "header":"Interchange",
+            "header": "Interchange",
             "bgImage": "./src/resources/locations/Interchange/inter-ingame-map.jpg",
-            "content":"content",
-            "specificGuides": "specific guides content"
+            "content": "content",
+            "specificGuides": {
+                "guide": "specific guides content"
+            }
         },
         "Customs": {
-            "header":"Customs",
+            "header": "Customs",
             "bgImage": "./src/resources/locations/Customs/customs_bg1.png",
-            "content":"content",
+            "content": "content",
             "specificGuides": "specific guides content"
         },
         "Factory": {
-            "header":"Factory",
+            "header": "Factory",
             "bgImage": "url",
-            "content":"content",
+            "content": "content",
             "specificGuides": "specific guides content"
         },
         "Woods": {
-            "header":"Woods",
+            "header": "Woods",
             "bgImage": "url",
-            "content":"content",
+            "content": "content",
             "specificGuides": "specific guides content"
         },
         "Shoreline": {
-            "header":"Shoreline",
+            "header": "Shoreline",
             "bgImage": "url",
-            "content":"content",
+            "content": "content",
             "specificGuides": "specific guides content"
         },
         "Lab": {
-            "header":"Lab",
+            "header": "Lab",
             "bgImage": "url",
-            "content":"content",
+            "content": "content",
             "specificGuides": "specific guides content"
         }
     },
-    "comments": {
+    "Comments": {
         "InterchangeComments": [
             {
                 "author": "VinnyXL",
                 "avatarColor": "#124241",
                 "commentContent": "I hate this map, killa is op and i get instantly obliterated from seemingly nowhere!",
                 "datePosted": "20/4/2019"
-            },{
+            },
+            {
                 "author": "VinnyXL2",
                 "avatarColor": "#128841",
                 "commentContent": "Amazing map! killa is op and i love it!",
-                "datePosted": "20/4/2019" 
+                "datePosted": "20/4/2019"
             }
         ],
         "CustomsComments": [
