@@ -6,8 +6,18 @@ import myData from '../data.json';
 
 
 class Navbar extends Component {
+    constructor(props){
+        super(props);
+        this.state = { data:myData.General.navbar_items};
+    }
+
+    // componentDidMount(){
+    //     fetch('https://api.mydomain.com')
+    //   .then(response => response.json())
+    //   .then(data => this.setState({ data }));
+    // }
     render() {
-        var navbarItems = myData.navbar_items;
+        var navbarItems = this.state.data;
         return (
             <div className='Navbar'>
                 {navbarItems.map((item, key) => {

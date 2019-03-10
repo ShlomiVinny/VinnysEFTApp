@@ -6,19 +6,22 @@ import '../app.css';
 class Sidebar extends Component {
     constructor(props){
         super(props);
-        this.state={SidebarMounted:true};
+        this.state={
+            SidebarMounted : true,
+            sidebarItems : myData.General.sidebar_items
+        };
     }
 
     componentDidMount(){
         
-        SidebarMounted=this.state.SidebarMounted;
+        SidebarMounted = this.state.SidebarMounted;
         console.log("Sidebar Mounted:"+SidebarMounted)
     }
     
     render() {
         
         
-        const sidebarItems = myData.sidebar_items;
+        const sidebarItems = this.state.sidebarItems;
         return (
             <div className='Sidebar' id="Sidebar">
 

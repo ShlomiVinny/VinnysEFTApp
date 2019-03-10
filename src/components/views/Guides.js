@@ -8,22 +8,32 @@ import myData from '../../data.json';
 class Guides extends Component {
   constructor(props) {
     super(props);
-    this.state={ GuidesContent: myData.GuidesContent };
-}
+    this.state = {
+       GuidesContent : myData.Content.GuidesContent
+       };
+  }
+
+  // componentDidMount(){
+  //     fetch('https://api.mydomain.com')
+  //   .then(response => response.json())
+  //   .then(data => this.setState({ data }));
+  // }
+
   render() {
+    const GuidesContent = this.state.GuidesContent;
     return (
       <div className="App with-navbar">
-                    <Sidebar />
-                    <SidebarButton />
-                    <div className="App-top">
-                        <Navbar />
-                    </div>
-                    <div className='App-content-wrapper top-12vh' style={{ backgroundImage: 'url(' + this.state.GuidesContent.bgImage + ')' }}>
-                        <div className='App-header'>{this.state.GuidesContent.header}</div>
-                        <div className='App-content min-height60'>{this.state.GuidesContent.content}</div>
-                        <div className='App-content2 min-height28'>{this.state.GuidesContent.content2}</div>
-                    </div>
-                </div>
+        <Sidebar />
+        <SidebarButton />
+        <div className="App-top">
+          <Navbar />
+        </div>
+        <div className='App-content-wrapper top-12vh' style={{ backgroundImage: 'url(' + GuidesContent.bgImage + ')' }}>
+          <div className='App-header'>{GuidesContent.header}</div>
+          <div className='App-content min-height60'>{GuidesContent.content}</div>
+          <div className='App-content2 min-height28'>{GuidesContent.content2}</div>
+        </div>
+      </div>
     )
   }
 }

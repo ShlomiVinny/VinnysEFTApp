@@ -5,20 +5,30 @@ import '../app.css';
 
 
 
-// ******************************************************* LoginMagic class **********************************************************
+// ******************************************************* Buttons class **********************************************************
 
 
 //   Notes: for <Link> pass a 'genericLink' type prop, 'which' prop and an onClick prop.
 //          for <button> pass a  'genericButton' type prop, 'buttonText' prop and an onClick prop as well.
 //          for <map-Link> pass a 'mapLink' type prop and a 'which' prop.
 
- export function CreateButton(props){
-    switch(props.type){
+export function CreateButton(props) {
+    switch (props.type) {
         default: return null;
-        case "mapLink": return (<Link className={'map-Link-' + props.which} to={"/Locations/"+props.which}><div style={{width: 1+'em', height:1+'em', display:'inline-block'}}></div></Link>);
-        case "genericLink":return (<Link className= {props.which+'-button Generic-button'} to={"/"+props.which} onClick={props.onClick}>{props.which}</Link>);
-        case "genericButton":return (<button className= {props.which+'-button Generic-button'} onClick={props.onClick}>{props.which}</button>)
-        case "sidebar":return (<button className='Sidebar-button' onClick={props.onClick}>{props.buttonText}</button>);
+        case "mapLink": return (
+            <Link className={'map-Link-' + props.which} to={"/Locations/" + props.which}>
+                <div style={{ width: 1 + 'em', height: 1 + 'em', display: 'inline-block' }}></div>
+            </Link>
+        );
+        case "genericLink": return (
+            <Link className={props.which + '-button Generic-button'} to={"/" + props.which} onClick={props.onClick}>{props.which}</Link>
+        );
+        case "genericButton": return (
+            <button className={props.which + '-button Generic-button'} onClick={props.onClick}>{props.which}</button>
+        );
+        case "sidebar": return (
+            <button className='Sidebar-button' onClick={props.onClick}>{props.buttonText}</button>
+        );
     }
 }
 
@@ -42,7 +52,7 @@ export class LoginMagic extends Component {
         }
     }
 
-    logoutUser(){
+    logoutUser() {
         console.log("User requested logout!")
     }
 
@@ -127,22 +137,3 @@ class SidebarButton extends Component {
 
 
 export default SidebarButton;
-
-
-
-
-// class LoginButton extends Component {
-//     handleClick() {
-//       console.log('this is:', this);
-//     }
-
-//     render() {
-//       // This syntax ensures `this` is bound within handleClick
-//       return (
-//         <button onClick={(e) => this.handleClick(e)}>
-//           Click me
-//         </button>
-//       );
-//     }
-//   }
-//   export default LoginButton;

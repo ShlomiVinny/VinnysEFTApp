@@ -9,22 +9,28 @@ class CommentSection extends Component {
         this.state = {};
     }
 
+   // componentDidMount(){
+    //     fetch('https://api.mydomain.com')
+    //   .then(response => response.json())
+    //   .then(data => this.setState({ data }));
+    // }
+
     render() {
         var comments;
 
         switch (this.props.location) {
-            default: return null;
-            case "Interchange": comments = myData.comments.InterchangeComments;
+            default: return <div id='error'> ERROR! </div>;
+            case "Interchange": comments = myData.Comments.InterchangeComments;
                 break;
-            case "Customs": comments = myData.comments.CustomsComments;
+            case "Customs": comments = myData.Comments.CustomsComments;
                 break;
-            case "Factory": comments = myData.comments.FactoryComments;
+            case "Factory": comments = myData.Comments.FactoryComments;
                 break;
-            case "Woods": comments = myData.comments.WoodsComments;
+            case "Woods": comments = myData.Comments.WoodsComments;
                 break;
-            case "Shoreline": comments = myData.comments.ShorelineComments;
+            case "Shoreline": comments = myData.Comments.ShorelineComments;
                 break;
-            case "Lab": comments = myData.comments.LabComments;
+            case "Lab": comments = myData.Comments.LabComments;
                 break;
         }
 

@@ -12,12 +12,19 @@ class Locations extends Component {
         super(props);
         this.state = {
             Locations: myData.Locations,
-            LocationsContent: myData.LocationsContent,
+            LocationsContent: myData.Content.LocationsContent,
             map: this.props.match.params.map
         };
     }
 
+    // componentDidMount(){
+    //     fetch('https://api.mydomain.com')
+    //   .then(response => response.json())
+    //   .then(data => this.setState({ data }));
+    // }
+
     render() {
+        const LocationsContent = this.state.LocationsContent;
         var m = this.state.map;
         var l = this.state.Locations;
         if (!m) {
@@ -27,7 +34,7 @@ class Locations extends Component {
                         <Navbar />
                     </div>
                     <div className='App-content-wrapper top-12vh'>
-                        <div className='App-header'>{this.state.LocationsContent.header}</div>
+                        <div className='App-header'>{LocationsContent.header}</div>
                         <div id="locations">
 
                             <CreateButton type="mapLink" which="Interchange" ></CreateButton>

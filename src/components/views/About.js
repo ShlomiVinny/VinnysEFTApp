@@ -10,6 +10,13 @@ class About extends Component {
         super(props);
         this.state = { AboutContent: myData.AboutContent };
     }
+
+    // componentDidMount(){
+    //     fetch('https://api.mydomain.com')
+    //   .then(response => response.json())
+    //   .then(data => this.setState({ data }));
+    // }
+
     render() {
         return (
             <div className="App with-navbar">

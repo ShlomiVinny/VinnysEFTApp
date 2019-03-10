@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const { createDB, createCollections } = require('./mogofunctions')
+const request = require('request');
+const { createDB } = require('./mogofunctions')
 
 
 // DB Initialization 
@@ -26,15 +27,17 @@ if (argv.startDB) {
 // ---- end of yargs and argv ----
 
 
-
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/ajax', (req, res) => {
 
+// Request framework requests
+request('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY', { json: true }, (err, res, body) => {
+  if (err) { return console.log(err); }
+  console.log(body.url);
+  console.log(body.explanation);
 });
-
 
 
 let port = process.env.PORT || 3001;

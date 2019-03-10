@@ -71,46 +71,48 @@
             }
         ]
     },
-    "Content": [
-        {
-            "name": "AboutContent",
-            "bgImage": "",
+    "Content": {
+        "AboutContent":{
+            
+            "bgImage": "url",
             "header": "About",
             "content": "AboutContent content",
             "content2": "AboutContent content 2"
         },
-        {
-            "name": "WelcomeContent",
-            "bgImage": "",
+        "WelcomeContent":{
+            
+            "bgImage": "url",
             "header": "Welcome to Vinny's Fan-Site App",
             "content": "Are you registered?",
             "content2": "If not, register now and enjoy all things tarkov!"
         },
-        {
-            "name": "MainContent",
-            "bgImage": "",
+        "MainContent":{
+            
+            "bgImage": "url",
             "header": "Main header",
             "content": "Main content",
             "content2": "Main content 2"
         },
-        {
-            "name": "GuidesContent",
-            "bgImage": "",
+        "GuidesContent":{
+            
+            "bgImage": "url",
             "header": "Guides header",
             "content": "Guides content",
             "content2": "Guides content 2"
         },
-        {
-            "name": "LocationsContent",
-            "bgImage": "",
+        "LocationsContent":{
+            
+            "bgImage": "url",
             "header": "Choose a Location:",
             "content": "Guides content",
             "content2": "Guides content 2"
         }
-    ],
+    },
+
+
     "Users": [
         {
-            "name": "user1",
+            
             "username": "VinnyXL",
             "pw": "password1",
             "registeredSince": "4/20",
@@ -126,9 +128,7 @@
             "header": "Interchange",
             "bgImage": "./src/resources/locations/Interchange/inter-ingame-map.jpg",
             "content": "content",
-            "specificGuides": {
-                "guide": "specific guides content"
-            }
+            "specificGuides": "specific guides content"
         },
         "Customs": {
             "header": "Customs",
