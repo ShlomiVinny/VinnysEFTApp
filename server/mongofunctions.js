@@ -1,7 +1,7 @@
 let MongoClient = require('mongodb').MongoClient;
 let url = "mongodb://vinnyseftapp-6137:Q!q1w2w2e3e3@db-vinnyseftapp-6137.nodechef.com:5443/vinnyseftapp";
 let collections = 0;
-let myData = require('../src/data.json');
+let myData = require('./src/data.json');
 let launchNextFunc=false;
 
 function createDB() {

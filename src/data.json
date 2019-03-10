@@ -31,36 +31,35 @@
             {
                 "name": "Guides",
                 "path": "/Guides",
-                "menu_items": [
-                    {
-                        "name": "Guides-item1",
-                        "path": "/Guides"
-                    },
-                    {
-                        "name": "Guides-item2",
-                        "path": "/Guides"
-                    },
-                    {
-                        "name": "Guides-item3",
-                        "path": "/Guides"
-                    }
-                ]
+                "menu_items": []
             },
             {
                 "name": "Locations",
                 "path": "/Locations",
                 "menu_items": [
                     {
-                        "name": "Locations-item1",
-                        "path": "/Locations"
+                        "name": "Interchange",
+                        "path": "/Locations/Interchange"
                     },
                     {
-                        "name": "Locations-item2",
-                        "path": "/Locations"
+                        "name": "Customs",
+                        "path": "/Locations/Customs"
                     },
                     {
-                        "name": "Locations-item3",
-                        "path": "/Locations"
+                        "name": "Factory",
+                        "path": "/Locations/Factory"
+                    },
+                    {
+                        "name": "Shoreline",
+                        "path": "/Locations/Shoreline"
+                    },
+                    {
+                        "name": "Woods",
+                        "path": "/Locations/Woods"
+                    },
+                    {
+                        "name": "Lab",
+                        "path": "/Locations/Lab"
                     }
                 ]
             },

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import myData from '../../data.json';
 import { LoginMagic } from '../Buttons';
 import { CreateButton } from '../Buttons';
 
@@ -8,18 +7,18 @@ import { CreateButton } from '../Buttons';
 class Welcome extends Component {
     constructor(props) {
         super(props);
-        this.state = { WelcomeContent: myData.Content.WelcomeContent, users: myData.Users };
+        this.state = {};
     }
 
-    // componentDidMount(){
-    //     fetch('https://api.mydomain.com')
-    //   .then(response => response.json())
-    //   .then(data => this.setState({ data }));
-    // }
+    componentDidMount(){
+        fetch('/')
+      .then(res => res.json())
+      .then(data => this.setState({data}));
+    }
 
     render(){
-        const content = this.state.WelcomeContent;
-        const users = this.state.users;
+        const content = this.state.data.Content.WelcomeContent;
+        const users = this.state.data.Users;
         return(
             <div className="App with-navbar">
             <div className="App-top">

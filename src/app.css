@@ -221,7 +221,7 @@ body {
 
 .Sidebar{
   text-align: left;
-  padding: 10vh 0 10vh 0;
+  padding: 10vh 2vw 10vh 1vw;
   background-color: #9a8866;
   z-index: 5;
   max-width: 20vw;
@@ -264,9 +264,10 @@ body {
 .Sidebar-item-link:hover{
   text-decoration: none;
   color: #000000;
+  transform: scale(1.1);
 }
 .Sidebar-item-span{
-   margin-left: 3vw;
+   margin-left: 2.5vw;
 }
 .Sidebar-inner-item{
   flex: 1;
@@ -275,7 +276,7 @@ body {
   list-style-type: circle;
   font-size: 1vw;
   color: #000000;
-  margin: 0.5vh 0 0.5vw 3vw;
+  margin: 1vh 0 0.5vw 1.5vw;
   padding-left: 2vw;  /**space between text and bullet**/
 }
 .Sidebar-inner-item:hover{
@@ -316,27 +317,6 @@ body {
   color: #9a8866;
   box-shadow: #9a8866 0 0 40px;
 }
-
-
-/* Sidebar animation start*/
-@keyframes SidebarSlideIn {
-  from{
-    left: -20vw;
-  }
-  to{
-    left: 0vw;
-  }
-}
-
-@keyframes SidebarSlideOut {
-  from{
-    left: 0vw;
-  }
-  to{
-    left: -20vw;
-  }
-}
-/* Sidebar animation end*/
 
 
 
@@ -521,8 +501,8 @@ body {
 .comment-avatar{ 
   margin: auto 2vw auto 0;
   border-radius: 50%;
-max-width: 5vw;
-max-height: 5vw;
+  max-width: 5vw;
+  max-height: 5vw;
 }
 
 .comment-text{
@@ -534,8 +514,8 @@ max-height: 5vw;
 
 .comment-author{
   color: #000000;
-   font-family: fantasy;
-  }
+  font-family: fantasy;
+}
 
 .comment-content{
   color: #000000;
@@ -554,6 +534,27 @@ max-height: 5vw;
 
 
 
+
+
+/* Sidebar animation start*/
+@keyframes SidebarSlideIn {
+  from{
+    left: -20vw;
+  }
+  to{
+    left: 0.5vw;
+  }
+}
+
+@keyframes SidebarSlideOut {
+  from{
+    left: 0.5vw;
+  }
+  to{
+    left: -20vw;
+  }
+}
+/* Sidebar animation end*/
 
 
 @keyframes App-logo-spin {
