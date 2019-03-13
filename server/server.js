@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-app.get('/', (req, res) => {
+app.get('/', cors(), (req, res) => {
     
     res.send(myData);
     console.log('Server sent response for url:"/" ');

@@ -4,7 +4,7 @@ import Welcome from './components/views/Welcome';
 import Home from './components/views/Home';
 import Guides from './components/views/Guides';
 import Locations from './components/views/Locations';
-import About from './components/views/About';
+import About from './components/views/About'; 
 
 class Routes extends Component {
     render() {

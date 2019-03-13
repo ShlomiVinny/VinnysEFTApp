@@ -226,7 +226,8 @@ body {
 
 
 
-
+.Sidebar-animation-in{}
+.Sidebar-animation-out{}
 
 .Sidebar{
   text-align: left;
@@ -239,7 +240,7 @@ body {
   display: table;
   position: absolute;
   top: 5vh;
-  left: -20vw;
+  left: 0vw;
   border-radius: 1vw;
 }
 /* Animation Shorthand:   Animation: <Name> <duration> <timing function> <delay> <iterations> <direction> */

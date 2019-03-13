@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar';
-import Sidebar from '../Sidebar';
 import SidebarButton from '../Buttons.js';
 import myData from '../../data.json';
 // import logo from '../../resources/V_logo.png';
@@ -23,7 +22,7 @@ class Home extends Component {
         const MainContent = this.state.MainContent;
         return(
     <div className="App with-navbar">
-    <Sidebar />
+    
     <SidebarButton />
     <div className="App-top">
         <Navbar />

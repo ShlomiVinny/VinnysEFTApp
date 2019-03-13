@@ -8,14 +8,14 @@ class Sidebar extends Component {
         super(props);
         this.state={
             SidebarMounted : true,
-            sidebarItems : myData.General.sidebar_items
+            sidebarItems : myData.General.sidebar_items,
+            sentStyle: this.props.style
         };
     }
 
     componentDidMount(){
         
-        SidebarMounted = this.state.SidebarMounted;
-        console.log("Sidebar Mounted:"+SidebarMounted)
+        console.log("Sidebar Mounted")
     }
     
     render() {
@@ -23,7 +23,7 @@ class Sidebar extends Component {
         
         const sidebarItems = this.state.sidebarItems;
         return (
-            <div className='Sidebar' id="Sidebar">
+            <div className='Sidebar' ref="Sidebar" style={this.state.sentStyle}>
 
                 {sidebarItems.map((item, key) => {
                     let menuItems = item.menu_items;
@@ -52,7 +52,7 @@ class Sidebar extends Component {
     }
 }
 
-export let SidebarMounted;
+
 export default Sidebar;
 
 

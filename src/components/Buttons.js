@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Sidebar from './Sidebar';
 import { Link } from 'react-router-dom';
-import { SidebarMounted } from './Sidebar';
 import '../app.css';
 
 
@@ -90,48 +91,66 @@ class SidebarButton extends Component {
         super(props);
         this.openSidebar = this.openSidebar.bind(this);
         this.closeSidebar = this.closeSidebar.bind(this);
-        this.state = { menuDisplayed: false };
+        this.state = { menuDisplayed: false, sidebarStyle: {}};
     }
 
     // animation: SidebarSlide 1s linear 0s 1 forwards normal paused; <<<----NORMAL STATE
 
     closeSidebar() {
-        if (SidebarMounted) {
-            console.log("Close sidebar!")
-            const SidebarStyle = document.getElementById('Sidebar').style;
-            SidebarStyle.animation = 'SidebarSlideOut 0.5s linear 0s 1 forwards normal running';
-            this.setState({ menuDisplayed: false })
-
-        }
+        
+        this.setState({ menuDisplayed: false })
+        console.log("Close sidebar!")
+        let a = ReactDOM.findDOMNode(Sidebar);
+        console.log(a);
+        
     }
 
     openSidebar() {
-        if (SidebarMounted) {
-            console.log("Open sidebar!")
-            const SidebarStyle = document.getElementById('Sidebar').style;
-            SidebarStyle.animation = 'SidebarSlideIn 0.5s linear 0s 1 forwards normal running';
-            this.setState({ menuDisplayed: true })
-
-        }
+        
+        this.setState({ menuDisplayed: true })
+        console.log("Open sidebar!")    
+        
+       
     }
-
 
     render() {
         const menuDisplayed = this.state.menuDisplayed;
         let button;
-
+        let style;
         if (menuDisplayed) {
-            button = <CreateButton type="sidebar" buttonText="X" onClick={this.closeSidebar} />;
+            button = <CreateButton type="sidebar" buttonText="X" onClick={this.closeSidebar} />
+            style = {animation: 'SidebarSlideIn 0.5s linear 0s 1 forwards normal running'};
         } else {
-            button = <CreateButton type="sidebar" buttonText="|||" onClick={this.openSidebar} />;
+            button = <CreateButton type="sidebar" buttonText="|||" onClick={this.openSidebar} />
+            style = {animation: 'SidebarSlideOut 0.5s linear 0s 1 forwards normal running'};
         }
 
         return (
             <div className="sidebar-button-wrapper">
                 {button}
+
+                <Sidebar style={style}/>
             </div>
         )
     }
+
+    // componentDidUpdate(){
+    //     const menuDisplayed = this.state.menuDisplayed;
+
+    //     if (menuDisplayed) {
+    //         this.setState({button : <CreateButton type="sidebar" buttonText="X" onClick={this.closeSidebar} />})
+    //     } else {
+    //         this.setState({button : <CreateButton type="sidebar" buttonText="|||" onClick={this.openSidebar} />})
+    //     }
+
+    //     return (
+    //         <div className="sidebar-button-wrapper">
+    //             {this.state.button}
+
+    //             <Sidebar style={this.state.sidebarStyle}></Sidebar>
+    //         </div>
+    //     )
+    // }
 }
 
 

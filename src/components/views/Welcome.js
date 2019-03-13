@@ -13,8 +13,8 @@ class Welcome extends Component {
 
     componentDidMount() {
 
-        fetch('http://localhost:3000')
-            
+        fetch('http://localhost:3001/')
+            .then(res=>res.json())
             .then(response => {
                 console.dir('data recieved: ' + response);
                 this.setState({ data: response, loading: false });
