@@ -1,8 +1,7 @@
-let MongoClient = require('mongodb').MongoClient;
-let url = "mongodb://vinnyseftapp-6137:Q!q1w2w2e3e3@db-vinnyseftapp-6137.nodechef.com:5443/vinnyseftapp";
+const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb://vinnyseftapp-6137:Q!q1w2w2e3e3@db-vinnyseftapp-6137.nodechef.com:5443/vinnyseftapp";
+const myData = require('../src/data.json');
 let collections = 0;
-let myData = require('./src/data.json');
-let launchNextFunc=false;
 
 function createDB() {
     MongoClient.connect(url, { useNewUrlParser: true }, (err, db) => {
@@ -61,7 +60,7 @@ function createCollections() {
 
     });
 
-        resolve(launchNextFunc=true, console.log('Resolved! Next func!'));
+        resolve(console.log('Resolved! Next func!'));
         
     })
      } //end of createCollections function
@@ -70,7 +69,7 @@ function createCollections() {
      async function asyncCall() {
         console.log('calling');
         var result = await createCollections();
-        launchNextFunc ? insertInitialData() : console.log('waiting for collections to be created...');
+        result ? insertInitialData() : console.log('waiting for collections to be created...');
         // expected output: 'resolved'
       }
 

@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const bodyParser = require('body-parser');
-const { createDB } = require('./mogofunctions');
-const myData = require('./src/data.json');
+const { createDB } = require('./mongofunctions');
+const myData = require('../src/data.json');
 
 
 // DB Initialization 
@@ -28,17 +29,19 @@ if (argv.startDB) {
 
 
 app.use(express.static('public'));
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-app.get('/api/greeting', (req, res) => {
-    const name = 'World';
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ greeting: `Hello ${name}!` }));
+app.get('/', (req, res) => {
+    
+    res.send(myData);
+    console.log('Server sent response for url:"/" ');
+    console.dir(myData);
   });
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 
 app.listen(port, function () {
     console.log('App listening on port: ' + port)
