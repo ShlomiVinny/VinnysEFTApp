@@ -5,6 +5,8 @@ import Home from './components/views/Home';
 import Guides from './components/views/Guides';
 import Locations from './components/views/Locations';
 import About from './components/views/About'; 
+import Loading from './components/Loading'; 
+import Registration from './components/Registration';
 
 class Routes extends Component {
     render() {
@@ -17,6 +19,8 @@ class Routes extends Component {
                     <Route path='/Locations' exact={true} component={Locations}></Route>
                     <Route path='/Locations/:map' exact={true} component={Locations}></Route>
                     <Route path='/About' exact={true} component={About}></Route>
+                    <Route path='/Loading' exact={true} component={Loading}></Route>
+                    <Route path='/Registration' exact={true} component={Registration}></Route>
                 </div>
             </Router >
         )

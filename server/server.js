@@ -19,10 +19,10 @@ function handleDB(){
 const argv = require('yargs').argv
 
 if (argv.startDB) {
-    console.log('Starting server with DB');
+    console.log('DB Initialization is ON!');
     handleDB();
 } else {
-    console.log('Starting server without DB');
+    console.log('DB Initialization is OFF!');
 }
 
 // ---- end of yargs and argv ----

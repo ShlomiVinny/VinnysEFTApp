@@ -12,7 +12,7 @@
   2. App main classes - App, logo, top
   3. App header and content
   4. Generic Buttons
-  5. Sidebar - Sidebar-item / -link
+  5. Sidebar[236] - Sidebar-item / -link
   6. Navbar 
   7. Twitter
   8. Main map, map-Links, locations
@@ -24,6 +24,7 @@
 /* -------------------------------------------- General -----------------------------------------   */
 
 body {
+  background-color: #000000;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -47,16 +48,34 @@ body {
 }
 
 #loading{
-  position: absolute;
-  top: 50vh;
-  left: 45vw;
-  text-align: center;
-  color: #9a8866;
-  font-size: 42pt;
-  animation: loading 3s linear 0s infinite forwards normal running;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background-color: #9a8866;
 }
 
+#loadingbg-light{
+  width: 20vw;
+  height: 30vh;
+  z-index: 4;
+  position: relative;
+  top: 45vh;
+  animation: loading 2.2s linear 0s infinite both normal running;
+}
 
+#loadingbg{
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  
+  z-index: 5;
+}
+
+.App-video-guide{
+  margin: 1vh;
+}
 
 
 /* ------------------------------------------------------------- App main classes --------------------------------------------------- */
@@ -67,10 +86,6 @@ body {
 
 
 
-#App-wrapper{
-  background-color: #000000;
-  
-}
 
 .App {
   background-color: #000000;
@@ -226,8 +241,6 @@ body {
 
 
 
-.Sidebar-animation-in{}
-.Sidebar-animation-out{}
 
 .Sidebar{
   text-align: left;
@@ -240,7 +253,7 @@ body {
   display: table;
   position: absolute;
   top: 5vh;
-  left: 0vw;
+  left: -20vw;
   border-radius: 1vw;
 }
 /* Animation Shorthand:   Animation: <Name> <duration> <timing function> <delay> <iterations> <direction> */
@@ -328,6 +341,19 @@ body {
   box-shadow: #9a8866 0 0 40px;
 }
 
+/* ----------------------------------------------------------------------------- Registration ----------------------------------------------------------------------- */
+
+#App-registration-fieldset{
+  display: flex;
+  flex-direction: column;
+  
+}
+.App-registration-input{
+
+  margin: 1vh auto 3vh auto;
+}
+
+#App-registration{}
 
 
 
@@ -569,13 +595,10 @@ body {
 
 @keyframes loading {
   from {
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(1.3);
+    left: -50vw;
   }
   to {
-    transform: scale(1);
+    left: 50vw;
   }
 }
 

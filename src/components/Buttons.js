@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Sidebar from './Sidebar';
+import Sidebar, { SidebarMounted } from './Sidebar';
 import { Link } from 'react-router-dom';
 import '../app.css';
 
@@ -25,7 +24,7 @@ export function CreateButton(props) {
             <Link className={props.which + '-button Generic-button'} to={"/" + props.which} onClick={props.onClick}>{props.which}</Link>
         );
         case "genericButton": return (
-            <button className={props.which + '-button Generic-button'} onClick={props.onClick}>{props.which}</button>
+            <button className={props.which + '-button Generic-button'} onClick={props.onClick}>{props.buttonText}</button>
         );
         case "sidebar": return (
             <button className='Sidebar-button' onClick={props.onClick}>{props.buttonText}</button>
@@ -91,45 +90,43 @@ class SidebarButton extends Component {
         super(props);
         this.openSidebar = this.openSidebar.bind(this);
         this.closeSidebar = this.closeSidebar.bind(this);
-        this.state = { menuDisplayed: false, sidebarStyle: {}};
+        this.state = {
+            menuDisplayed: false,
+            style:{},
+        };
     }
 
     // animation: SidebarSlide 1s linear 0s 1 forwards normal paused; <<<----NORMAL STATE
 
     closeSidebar() {
-        
+        if(SidebarMounted){
         this.setState({ menuDisplayed: false })
         console.log("Close sidebar!")
-        let a = ReactDOM.findDOMNode(Sidebar);
-        console.log(a);
-        
+        this.setState({style: { animation: 'SidebarSlideOut 0.5s linear 0s 1 forwards normal running' }})
+        }
     }
 
     openSidebar() {
-        
+
         this.setState({ menuDisplayed: true })
-        console.log("Open sidebar!")    
+        console.log("Open sidebar!")
+        this.setState({style: { animation: 'SidebarSlideIn 0.5s linear 0s 1 forwards normal running' }})
         
-       
     }
 
     render() {
         const menuDisplayed = this.state.menuDisplayed;
         let button;
-        let style;
         if (menuDisplayed) {
             button = <CreateButton type="sidebar" buttonText="X" onClick={this.closeSidebar} />
-            style = {animation: 'SidebarSlideIn 0.5s linear 0s 1 forwards normal running'};
         } else {
             button = <CreateButton type="sidebar" buttonText="|||" onClick={this.openSidebar} />
-            style = {animation: 'SidebarSlideOut 0.5s linear 0s 1 forwards normal running'};
         }
 
         return (
             <div className="sidebar-button-wrapper">
                 {button}
-
-                <Sidebar style={style}/>
+               <Sidebar style={this.state.style}/>
             </div>
         )
     }

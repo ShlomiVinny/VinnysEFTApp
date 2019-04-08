@@ -17,7 +17,7 @@
                 "path": "/Locations"
             },
             {
-                "name": "Escape From Tarkov",
+                "name": "EFT.com",
                 "type": "Generic",
                 "path": "https://www.escapefromtarkov.com/"
             }
@@ -71,6 +71,12 @@
         ]
     },
     "Content": {
+        "RegistrationContent":{
+            "bgImage": "url",
+            "header": "Registration",
+            "content": "Registration content",
+            "content2": "Registration content 2"
+        },
         "AboutContent":{
             
             "bgImage": "url",
@@ -110,8 +116,7 @@
 
 
     "Users": [
-        {
-            
+        {   
             "username": "VinnyXL",
             "pw": "password1",
             "registeredSince": "4/20",
@@ -139,7 +144,7 @@
             "header": "Factory",
             "bgImage": "url",
             "content": "content",
-            "specificGuides": "specific guides content"
+            "specificGuides": "Here you can find guides that will help you get better, or even just learn something new about EFT!"
         },
         "Woods": {
             "header": "Woods",

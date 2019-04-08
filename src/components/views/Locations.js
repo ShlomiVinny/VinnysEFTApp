@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar';
 import myData from '../../data.json';
-import { CreateButton } from '../Buttons';
+import SidebarButton, { CreateButton } from '../Buttons';
 import CommentSection from '../CommentSection';
+import VideoGuides from '../VideoGuides';
 
 // import logo from '../../resources/V_logo.png';
 
@@ -13,12 +14,12 @@ class Locations extends Component {
         this.state = {
             Locations: myData.Locations,
             LocationsContent: myData.Content.LocationsContent,
-            map: this.props.match.params.map
+            map: this.props.match.params.map,
         };
     }
 
     // componentDidMount(){
-    //     fetch('https://api.mydomain.com')
+    //     fetch('')
     //   .then(response => response.json())
     //   .then(data => this.setState({ data }));
     // }
@@ -53,6 +54,7 @@ class Locations extends Component {
                 <div className="App with-navbar">
                     <div className="App-top">
                         <Navbar />
+                        <SidebarButton/>
                     </div>
 
                     <div className='App-content-bg top-12vh'
@@ -65,7 +67,10 @@ class Locations extends Component {
                             {l[m].content}
                         </div>
                         <div className="App-content min-height23">
-                            {l[m].specificGuides}
+
+                        {l[m].specificGuides}
+                        <VideoGuides map={m} />
+                            
                         </div>
                         <div className="App-content2 min-height60">
                             <div className="App-comments-header">Comments</div>

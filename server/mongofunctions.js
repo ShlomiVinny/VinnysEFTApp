@@ -60,7 +60,7 @@ function createCollections() {
 
     });
 
-        resolve(console.log('Resolved! Next func!'));
+        resolve(true);
         
     })
      } //end of createCollections function
@@ -69,7 +69,7 @@ function createCollections() {
      async function asyncCall() {
         console.log('calling');
         var result = await createCollections();
-        result ? insertInitialData() : console.log('waiting for collections to be created...');
+        result ? insertInitialData() : null;
         // expected output: 'resolved'
       }
 

@@ -13,7 +13,7 @@ class Home extends Component {
     }
 
     // componentDidMount(){
-    //     fetch('https://api.mydomain.com')
+    //     fetch('')
     //   .then(response => response.json())
     //   .then(data => this.setState({ data }));
     // }

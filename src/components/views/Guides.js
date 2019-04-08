@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar';
-import Sidebar from '../Sidebar';
+
 import SidebarButton from '../Buttons.js';
 import myData from '../../data.json';
 
@@ -14,7 +14,7 @@ class Guides extends Component {
   }
 
   // componentDidMount(){
-  //     fetch('https://api.mydomain.com')
+  //     fetch('')
   //   .then(response => response.json())
   //   .then(data => this.setState({ data }));
   // }
@@ -23,7 +23,7 @@ class Guides extends Component {
     const GuidesContent = this.state.GuidesContent;
     return (
       <div className="App with-navbar">
-        <Sidebar />
+        
         <SidebarButton />
         <div className="App-top">
           <Navbar />
