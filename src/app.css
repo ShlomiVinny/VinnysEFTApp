@@ -14,7 +14,7 @@
   4. Generic Buttons
   5. Sidebar[236] - Sidebar-item / -link
   6. Navbar 
-  7. Twitter
+  7. Twitter[404]
   8. Main map, map-Links, locations
   9. Comments
   10. Animations - @Key frames
@@ -409,7 +409,7 @@ body {
 
 
 .twitter-timeline{
-  z-index: 5;
+  z-index: 3;
   position: absolute !important;
   right: 0 !important;
   top: calc(12vh + 1px);
